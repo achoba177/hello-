@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+            
+            .calculator{padding: 20px;border: 1em;width: 300px;height: 200px;margin: auto;background:black;}
+            .display-box{border:solid black 0.5px;border-radius: 5px;width: 100%;height: 60%;font-family: Arial, Helvetica, sans-serif;font-size: 30px;}
+            .button{text-align: center;cursor: pointer;font-family: Orbitron,sans-serif;width: 100%;height: 60%;outline: none;font-size: 20px;padding: 20px;border-radius: 5px;background-color: red ;}
+            .button.active{box-shadow: inset 0px 0px 5px;}
+             .display1{color:white;}
+             #btn{color: white;}
+        </style>
+        <title>Tee calculator</title> 
+    </head>
+    <body>
+        <table class="calculator">
+            <tr>
+              <td colspan="4"><input class="display-box"type="text"id="result"enabled></td>
+           </tr>
+          <tr>
+             <td><input class="button"type="button"value="C"onclick="clearcsreen(C)"/></td>
+             <td><input class="button"type="button"value="+/-"onclick="display(+/-)"/></td>
+             <td><input class="button"type="button"value="%"onclick="display(%)"/></td>
+             <td class="display1"><input class="button"type="button"value="÷"onclick="dispaly1(÷)"/></td>
+          </tr>
+            <tr>
+             <td><input class="button"type="button"value="7"onclick="display(7)"/></td>
+             <td><input class="button"type="button"value="8"onclick="display(8)"/></td>
+             <td><input class="button"type="button"value="9"onclick="display(9)"/></td>
+             <td class="display1"><input class="button"type="button"value="x"onclick="dispaly1(x)"/></td>
+           </tr>
+           <tr>
+             <td><input class="button"type="button"value="4"onclick="dispaly(4)"/></td>
+             <td><input class="button"type="button"value="5"onclick="display(5)"/></td>
+             <td><input class="button"type="button"value="6"onclick="dispaly(6)"/></td>
+             <td class="display1"><input class="button"type="button"value="-"onclick="display1(-)"/></td>
+           </tr>
+           <tr>
+             <td><input class="button"type="button"value="1"onclick="dispaly(1)"/></td>
+             <td><input class="button"type="button"value="2"onclick="display(2)"/></td>
+             <td><input class="button"type="button"value="3"onclick="display(3)"/></td>
+             <td class="display1"><input class="button"type="button"value="+"onclick="dispaly1(+)"/></td>
+           </tr>
+           <tr>
+             <td><input class="button"type="button"value="0"onclick="dispaly(0)"/></td>
+             <td><input class="button"type="button"value="."onclick="dispaly(.)"/></td>
+             <td class="display1"><input class="button"type="button"value="="onclick="dispaly1(=)"/></td>
+             <td class="display1"><input class="button"type="button"value="*"onclick="dispaly1(*)"/></td>
+           </tr>
+        </table>
+
+
+           <script>
+            let num1="";    let num2="";
+
+            let operator=""; let total="";
+                $('button').on('click',function (e) {let btn=e.target.innerHTML;
+                     if (btn >= '0' && btn <= '9') {
+                      handleNumber(btn);
+                    
+                  }
+                  else{handleOperator(btn);}
+                  
+                })
+
+                     function handleNumber(num){ if (num1===''){
+                  num1=num;
+                  
+                }
+                      else{num2=num;} displaybutton(num);
+                }
+
+                    function handleOperator(oper){if (operator==='') {
+                      operator=oper;
+                      
+                    }
+
+                        else{handleTotal();  operator=oper;}
+
+
+                  }
+                    function handleTotal() {switch (operator) {
+                      case '+':  total= +num1+num2; displaybutton(total);
+                        
+                        break;  case'-': total= +num1 - +num2;  displaybutton(total);
+                    
+                      default:
+                        break; case '-': total= +num1 - +num2;  displaybutton(total);
+
+                        break;  case'/' total= +num1/ +num2;  displaybutton(total);
+
+                        break;      case 'x'  total= +num1*num2; displaybutton(total)
+
+                        break;  updateVariables();
+                    }
+                      
+                    }
+
+            
+           </script>                                     
+
+       
+    </body>
+</html>

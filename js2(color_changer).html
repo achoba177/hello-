@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Javascript</title>
+
+        <style>
+
+            
+                                         button{padding: 5px;border: 3px;border-radius: 10px;font-size: larger;background-color:yellow;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+        </style>
+
+    </head>
+          <body id="background">
+
+            <button type="button"  onclick="setbackgroundcolor()">Tee Color..</button>
+
+
+           <script>
+               const background = document.getElementById("background");
+
+
+                const getRandomNumber=(limit)=>{
+
+                    return Math.floor(Math.random() * limit);
+                };
+
+                const setbackgroundcolor=()=>{
+                 const h=getRandomNumber(360);
+
+                     const randomcolor=`hsl(${h}deg,70%,50%)`;
+                     background.style.backgroundColor=randomcolor;
+                     background.style.color=randomcolor;
+
+                };
+
+                        setbackgroundcolor();
+
+
+
+
+                        // program to display text 5 times
+                            const n = 5;
+
+                       // looping from i = 1 to 5
+                         for (let i = 1; i <= n; i++) {
+                          console.log(`I love JavaScript.`);
+                         }
+
+
+
+           </script>
+    </body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tee counter</title>
+         <style>
+                         *::after,*::before{padding: 0px;margin: 0px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
+        
+                        .counter_container{display: flex;align-items: center;justify-items: center;padding: 15px;margin-top: 3px;width: 200px;height: 300px;background-color: aquamarine;flex-direction: row;}
+                        span{font-size: 4rem;padding: 4px 3px;margin: left 1px; margin-right: 8px;border-radius: 3px;background-color: darkgray;align-self: center;}
+
+                        button{font-size: 5rem;cursor: pointer;background-color: transparent;border: 20px;box-sizing: border-box;border: 10px;}
+                        h1{text-shadow: 3px 3px;color: coral;text-transform: capitalize;padding: 10px;}
+
+
+
+
+         </style>
+
+        <body>
+            <h1>TEE Javascript Counter</h1>
+
+        <div class="counter_container">
+            
+        <button id="subtract" style="font-size: 7rem">-</button><span id="output">0</span>
+        <button id="add">+</button>
+
+
+        </div>
+
+
+
+
+
+
+               <script>
+                   let subtract=document.querySelector('#subtract');
+                 
+                   let add=document.querySelector('#add');
+
+
+                   add.addEventListener('click',function () {
+
+                    let output=document.querySelector('#output');
+
+                    let result = Number(output.innerText) + 1;
+                   
+                    if (result>20) {
+
+                        result=0;
+                        
+                    }
+                     
+                     output.innerText=result;
+
+                   });
+
+
+                   subtract.addEventListener('click',function () {
+
+                    let output=document.querySelector('#output');
+
+                    let result=Number(output.innerText)-1
+
+                    if (result<20) {
+
+                        result=0;
+                    
+                    }
+                     
+                     output.innerText=result;
+
+                   })
+
+
+                   // program to find the sum of positive numbers
+                 // if the user enters a negative numbers, the loop ends
+                      // the negative number entered is not added to sum
+
+                   let sum = 0;
+
+                    // take input from the user(while-loop)
+                   let number = parseInt(prompt('Enter a number: '));
+
+                  while(number >= 0) {
+
+              // add all positive numbers
+                sum += number;
+
+             // take input again if the number is positive
+          number = parseInt(prompt('Enter a number: '));
+           }
+
+            // display the sum
+              console.log(`The sum is ${sum}.`)
+
+
+                  // program to display numbers(do while loop)
+                              let i = 1;
+                            const n = 5;
+
+                   // do...while loop from 1 to 5
+                      do {
+                         console.log(i);
+                              i++;
+                          } while(i <= n);   
+
+
+
+                    // infinite do...while loop(condition always true)
+                 const count = 1;
+                   do {
+                   // body of loop
+
+                 } 
+                   while(count == 1)   
+
+
+                   //breaking looping
+
+
+                   // program to print the value of i
+                       for (let i = 1; i <= 5; i++) {
+                         // break condition     
+                           if (i == 3) {
+                                break;
+                           }
+                            console.log(i);
+                           }
+
+
+
+
+
+
+
+
+                           // program to find the sum of positive numbers
+                       // if the user enters a negative numbers, break ends the loop
+                            // the negative number entered is not added to sum
+
+                         let sum1 = 0, number1;
+
+                           while(true) {
+
+                  // take input again if the number is positive
+                         number1 = parseInt(prompt('Enter a number: '));
+
+                               // break condition
+                                if(number1 < 0) {
+                                    break;
+                                      }
+
+                      // add all positive numbers
+                   sum += number1;
+
+                     }
+
+                       // display the sum
+                  console.log(`The sum is ${sum}.`);
+
+
+
+
+
+                         // program to print the value of i
+                          for (let i = 1; i <= 5; i++) {
+
+                        // condition to continue    
+                            if (i == 3) {
+                             continue;
+                              }
+
+                              console.log(i);
+                              }
+
+                    // program to print the text
+                  // declaring a function
+                    function greet(name) {
+                  console.log("Hello " + name + ":)");
+                      }
+
+                      // variable name can be different
+                   let name113 = prompt("Enter a name: ");
+
+                         // calling function
+                           greet(name);
+
+
+
+
+                     // program to add two numbers
+                    // declaring a function
+                      function add(a, b) {
+    return a + b;
+}
+
+                     // take input from the user
+             let nmber1 = parseFloat(prompt("Enter first number: "));
+             let nmber2 = parseFloat(prompt("Enter second number: "));
+
+             // calling function
+             let result = add(number1,number2);
+
+                  // display the result
+                  console.log("The sum is " + result);
+
+
+
+
+
+
+// constructor function
+function Person () {
+    this.name = 'John',
+    this.age = 23,
+
+     this.greet = function () {
+        console.log('hello');
+    }
+}
+
+// create objects
+const person1 = new Person();
+const person2 = new Person();
+
+// access properties
+console.log(person1.name);  // John
+console.log(person2.name);  // John
+
+
+
+
+// constructor function
+function Person (person_name, person_age, person_gender) {
+
+// assigning  parameter values to the calling object
+ this.name = person_name,
+ this.age = person_age,
+ this.gender = person_gender,
+
+ this.greet = function () {
+     return ('Hi' + ' ' + this.name);
+ }
+}
+
+
+// creating objects
+const perrson1 = new Person('John', 23, 'male');
+const perrson2 = new Person('Sam', 25, 'female');
+
+// accessing properties
+console.log(person1.name.age); // "John"
+console.log(person2.name); // "Sam"
+
+
+// using object literal
+let person = {
+    name: 'Sam'
+}
+// using constructor function
+function Person () {
+    this.name = 'Sam'
+}
+
+let persson1 = new Person();
+let persson2 = new Person();
+
+
+// using object lateral
+let personn = {
+    name: 'Sam'
+}
+
+console.log(person.name); // Sam
+
+let student = person;
+
+// changes the property of an object
+student.name = 'John';
+
+// changes the origins object property
+console.log(person.name); // John
+
+
+// constructor function
+function Person () {
+    this.name = 'John',
+    this.age = 23
+}
+
+// creating objects
+let peerson1 = new Person();
+let peerson2 = new Person();
+
+// adding property to person1 object
+person1.gender = 'male';
+
+// adding method to person1 object
+person1.greet = function () {
+    console.log('hello');
+}
+
+person1.greet();   // hello
+
+
+
+
+
+
+// constructor function
+function Person () {
+    this.name = 'John',
+    this.age = 23
+}
+
+// creating objects
+let persoon1 = new Person();
+let persoon2 = new Person();
+
+// adding new property to constructor function
+Person.prototype.gender = 'Male';
+
+console.log(person1.gender); // Male
+console.log(person2.gender); // Male
+
+
+
+// constructor function
+function Person () {
+    this.name = 'John',
+    this.age = 23
+}
+
+// creating objects
+const person13 = new Person();
+const person23 = new Person();
+
+// adding property to constructor function
+Person.prototype.gender = 'male';
+
+// prototype value of Person
+console.log(Person.prototype);
+
+// inheriting the property from prototype
+console.log(person13.gender);
+console.log(person23.gender);
+
+
+
+// constructor function with prototype
+function Person() {
+    this.name = 'John'
+}
+
+// add a property
+Person.prototype.age = 20;
+
+// creating an object
+const person1 = new Person();
+
+console.log(person1.age); // 20
+
+// changing the property value of prototype
+Person.prototype = { age: 50 }
+
+// creating new object
+const person3 = new Person();
+
+console.log(person3.age); // 50
+console.log(person1.age); // 20
+
+
+function Person () {
+    this.name = 'John'
+}
+
+
+// adding a prototype
+Person.prototype.age = 24;
+
+// creating object
+const person22 = new Person();
+
+// accessing prototype property
+console.log(person.__proto__);   // { age: 24 }
+
+
+
+
+//Destructuring in javasccript
+
+// assigning object attributes to variables
+
+   // assigning object attributes to variables
+const person66 = {
+    name: 'Sara',
+    age: 25,
+    gender: 'female'    
+}
+
+     let { name, age, gender } = person66;   
+
+cosole.log(person66);
+                  
+
+
+                   
+                    
+
+                   
+
+               
+
+
+
+
+
+
+
+
+
+
+
+               </script>
+
+        </body>
+    </head>
+</html>

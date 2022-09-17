@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHINKEN WORLD</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+       body{background-repeat:no-repeat;background-size:cover;font-family:  Arial, Helvetica, sans-serif;background-image: url("images/hamburger.jpg")}
+
+       
+        .sidebar{
+             /* The sidebar menu */  
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0;
+            left: 0;
+            background-color: #111; /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+            }
+
+
+         /* The sidebar links */
+        .sidebar a {
+         padding: 8px 8px 8px 32px;
+         text-decoration: none;
+         font-size: 25px;
+         color: #818181;
+         display: block;
+        transition: 0.3s;
+         }   
+
+
+           /* When you mouse over the navigation links, change their color */
+            .sidebar a:hover {
+               color: #f1f1f1;
+                }
+
+            /* Position and style the close button (top right corner) */
+            .sidebar .closebtn {
+              position: absolute;
+              top: 0;
+              right: 25px;
+              font-size: 36px;
+               margin-left: 50px;
+                }
+
+               /* The button used to open the sidebar */
+                  .openbtn {
+                    font-size: 20px;
+                    cursor: pointer;
+                    background-color: #111;
+                    color: white;
+                    padding: 10px 15px;
+                     border: none;
+                    }
+
+
+                    .openbtn:hover {
+                   background-color: #444;
+                   }
+
+
+                   h1{color:yellowgreen;text-shadow: 4px 3px;font-size: 50px;font-style: oblique;font-stretch: expanded;font-display: block ;}
+
+
+                     h2{font: size 20px;color:yellow;}
+
+                       span{font-size: 27px;font-style: italic;}
+                   img{float: right;font-size: larger;width: 222px;height: 200px;}
+              
+                    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+                         #main {
+                        transition: margin-left .5s; /* If you want a transition effect */
+                        padding: 20px;
+                        }    
+
+                      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+                        @media screen and (max-height: 450px) {
+                           .sidebar {padding-top: 15px;}
+                           .sidebar a {font-size: 18px;}
+                           }
+     </style>
+</head>
+<body>
+
+    <div class="sidebar" id="mysidebar">
+        <a href="javascript:void(0)" class="closebtn"  onclick="closeNav()">x</a>
+        <a href="#">Burger Chinkin</a>
+        <a href="#">Burger Fish</a>
+        <a href="#">Burger Beef</a>
+        <a href="#">Burger  Turkey</a>
+        <a href="#">Burger Goat Meat</a>
+    </div>
+
+
+       <div  id="main">
+                  <img src="images/logot.png">
+          <h1> Tee--Why(Burger)</h1>
+
+              <button class="openbtn" onclick="openNav()"> &#9776; Menu</button>
+              <h2>Click On The Hamburger<span> menu/bar icon </span>To Open The Sidebar, And Push This Content To The Right.</h2>
+       </div>
+
+
+
+<script>
+
+  /*set width of the sidebar to 250px and the left margin of the page content to 250px */
+  function openNav() {
+
+    document.getElementById("mysidebar").style.width = '250px';
+    document.getElementById("main").style.marginLeft='250px';
+
+        }
+
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function  closeNav() {
+  document.getElementById("mysidebar").style.width='0';
+  document.getElementById("main").style.marginLeft = "0";
+}
+    
+
+
+
+</script>
+    
+
+
+
+
+    
+</body>
+</html>

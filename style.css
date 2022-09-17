@@ -1,0 +1,12 @@
+
+p {background-color: whitesmoke;font-size: large;text-align: justify;} 
+
+body {background-color: burlywood;}
+
+li {background-color:white;}
+
+h1 {font-family: sans-serif;text-align: center;}
+
+a:hover{display: block;color: black;}
+
+footer {border:0;background-color: grey;width: 100%;padding:20px;text-align:left;}

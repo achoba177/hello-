@@ -1,0 +1,20 @@
+div{background-color: aqua;width: 300px;height: 400px;padding-left: 50px;
+    padding-right: 30px;padding-top: 40px;padding-bottom: 40px;margin-top: 20px;margin-bottom: 20px;margin-left: 30px;margin-right: 40px;}
+
+
+
+
+body{background-image: url("images/girl.jpg");background-repeat: repeat;}
+
+
+#p{border-style: dotted solid DodgerBlue;border: 5px;}
+
+h3{text-align: center;text-shadow: 2px 2px;}
+span{text-indent: 80px;}
+
+h1{text-decoration:overline;text-transform: lowercase;text-indent: 50px;letter-spacing: 10px;white-space: nowrap;text-shadow: 5px;}
+
+span{font-size: 40px;font-family: Arial, Helvetica, sans-serif;font-weight: 200;font-style: italic;fon}
+
+
+    

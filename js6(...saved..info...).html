@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NETFLIX</title>
+        <style>
+                #Btn{border-radius: 10px;color:blue;background-color: chartreuse-;}
+                .myclass{background-color: brown;}
+
+
+        </style>
+    </head>
+    <body>
+        <h1>Tee first Javascript</h1>
+         <button id="btn">Tee</button>
+         <p id="p1"></p>
+         <input type="button" id="btn" value="clickme" class="class1" onclick="getclass();"/>
+          
+
+
+        <script>
+            let unoderlist=document.createElement('ul');
+            document.body.appendChild(unoderlist);
+               unoderlist.style.color='blue';
+
+
+            let item1=document.createElement('li');
+                item1.textContent='No God Like You';
+                unoderlist.appendChild(item1);
+
+            let item2=document.createElement('li');
+                item2.textContent='You No Be Man';
+                unoderlist.appendChild(item2);
+
+            let item3=document.createElement('li');
+                item3.textContent='Your Doings Is Awesome';
+                unoderlist.appendChild(item3);
+
+            let item4=document.createElement('li');
+               item4.textContent='Your Works Is A miracle';
+               unoderlist.appendChild(item4);
+            
+               let para1=document.createElement('p');
+               document.body.appendChild(para1);
+               para1.textContent="Always Bless The Name Of The Lord";
+               para1.style.color='violet';
+
+               let para2=document.createElement('p');
+                document.body.appendChild(para2);
+                para2.textContent='Ups And Down Will Surely Come In A Human Life!!!';
+                para2.style.color='violet';
+
+               const head=document.querySelector('h1');
+                  head.textContent='Relationship With God Matters..';
+                  head.style.color='red';
+
+                  const button=document.getElementById('Btn');
+                  button.addEventListener("click",()=>{alert('HURRAY!!!TEEWORLD');})
+
+                  function advice() {
+                    alert('God Is Great');
+                    
+                  }
+                     advice();
+                   
+                     function sum(val1,val2) {
+                        return val1+val2
+                        
+                     };
+                     let result=sum(20,40);
+                      console.log(sum);
+
+                     
+
+                        function message(firstname){
+
+                            function sayhello(params) {
+                                alert('TEEWHY'+ firstname);
+                                
+                            }
+                            return sayhello()
+                        }
+                            message('mix');
+                            message('MIX UP AND LINK UP');
+
+
+                            //object with properties and method
+                            let person={
+                                firstname:'TEE',
+                                lastname:'Why',
+                                Eyecolor:'White',
+                                getfullname: function () {
+                                    return this.firstname+ ' ' +this.lastname
+                                    
+                                }
+                            };
+                               console.log(person);
+                               function greeting(params) {
+                                console.log ('Life is nature');
+                               }
+                               greeting();
+
+                               let newhead=document.createElement('p')
+                               document.body.appendChild(newhead);
+                               newhead.textContent='Jah Never Let His Own Unsafe';
+                               newhead.style.color='violet';
+
+                                      //IIFE,(Immediately Involve Function Expression)
+                                               (function name(params) {
+                                            
+                                               })();
+
+                                      //Function scope
+                                      let a=60
+                                      let b=40
+
+
+                                      //this function is also defined in the global scope
+ 
+                                         function parentFunc(){
+
+	                                       let  name = 'Doe';
+    
+                                           //this inner function is defined inside the parent function scope
+    
+	                                  function childFunc(){
+		                              console.log(`${name} is ${a - b} years old`); 
+                                      }
+                                            return childFunc();
+                                        }
+
+                                     parentFunc(); //ouput: Doe is 20 years old
+
+
+                                      //How Parameters Works
+                                     function greeting(name, message = 'Hello'){
+	                                   console. log(`${messgae}  ${name}`)
+                                       }
+
+                                       greeting('John'); //output: Hello John
+
+                                              //you can also assign a new value to the default parameter 
+                                                //when you call the function
+
+                                              greeting('Tee', 'Hi'); //output: Hi Doe
+
+                                              //Rest Parameter Works
+                                              function sayHello(message, ...names){
+                                              names.forEach(name => console.log(`${message} ${name}`));
+                                                   }
+                                                  sayHello('Hello', "John", "Smith", "Doe");
+
+                                                  let x=fun();
+                                                     //For Looping
+                                                  function fun() {
+                                                    let i=1;
+                                                    while (i) {
+                                                        console.log(i+'<br>');
+                                                        if(i===4){
+                                                            return;
+                                                        }
+                                                        console.log(i+'<br>');
+                                                        i++;
+                                                    }
+                                                    console.log('Hello World');
+                                                    
+                                                  }
+
+                                                 //returning multiple values using array or object
+                                                  function getData() {
+
+                                                    let fname='Tee',
+                                                   lname='Tony',
+                                                    age='105',
+                                                    occupation='Developer';
+
+                                                    return[fname,lname,age,occupation];
+                                                
+
+                                                  }
+                                                  const[fname,lname,age,occupation]=getData();
+                                                  document.write("Name=" + fname +""+ lname +"<br>");
+                                                  document.write("Age=" + age +"<br>");
+                                                  document.write("occupation=" +occupation);
+
+
+                                                  //classlist method
+                                                  function getclass() {
+                                                    let e=document.getElementsByid("btn");
+                                                    e.classList.add('.myclass');
+                                                
+                                                  }
+                                                  
+                                                      //object by literal
+                                                    let staff={idnum:200,Name:"Tee",salary:40000}
+                                                    document.write(staffidnum+  "" + staffName+ "" +staffsalary);
+
+                                                    //object with the keyword:by creating instance
+                                                    var emp=new Object();
+                                                    emp.id=101;
+                                                    emp.name='Tony';
+                                                    emp.salary=60000;
+                                                    document.write(emp.id+ "" +emp.name + "" +emp.salary);
+
+                                                    //creating object by object consrtuctor
+                                                    function pmb(id,name,car) {
+                                                        this.id=id;
+                                                        this.name=name;
+                                                        this.car=car;
+                                                        e=new pmb(404,'Anthony','Toyota',);
+                                                        document.write(e.id+ '' +e.name + '' +e.car);
+                                                        
+                                                    }
+                                                
+                          
+
+
+
+
+
+
+
+
+
+        </script>            
+    </body>
+</html>

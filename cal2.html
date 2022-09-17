@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Pacifico|Oxygen);
+
+    
+     p{margin: 0;font-family: 'Pacifico';left: 5%;font-size: medium;}
+      .calculator{margin: 1em auto;padding: 1em 0;display: inline-block;width: 350px;background-color: grey;border-radius: 25px;box-shadow: 5px 5px 15px 3px;font-family: 'Oxygen';;}
+
+      .calc-row{text-align: center;}
+      .calc-row div.screen{font-family: Arial, Helvetica, sans-serif;display: table;width: 85%;background-color: #aaa;text-align: right;font-size: 2em;min-height: 1.2em;margin-left: 0.5em;border: 1px solid #888;color: #333;padding-right: 00.5em;}
+
+      .calc-row div{text-align: center;display:inline-block;font-weight: bold;border: 1px solid #555;background-color: #eee;padding: 10px 0;margin: 7px 5px;border-radius: 15px;box-shadow: 2px 2px 1px 1px #222;width: 50px;}
+      .calc-row div.zero{width: 112px;}
+      .calc-row div.zero{margin-left: 5px;}
+
+
+
+
+
+
+
+
+        </style>
+
+
+
+
+
+
+
+</head>
+<body>
+
+    <div class="calculator">
+       <h1>Tee cal</h1>
+       <div class="calc-row">
+        <div class="screen">0</div>
+      </div>
+       
+    
+
+       <div class="calc-row">
+        <div class="button" style="background-color:coral" id="crlBtn">C</div>
+        <div class="button" style="background-color: coral">%</div>
+        <div class="button" style="background-color: coral">+/-</div>
+        <div class="button" style="background-color: coral">÷</div>
+       </div>
+
+        <div class="calc-row">
+                 <div class="button" id="numbtn">7</div>
+               <div class="button" id="numbtn">8</div>
+               <div class="button" id="numbtn">9</div>
+             <div class="button" style="background-color: coral">x</div>
+        </div>
+
+        <div class="calc-row">
+               <div class="button" id="numbtn">4</div>
+                <div class="button" id="numbtn">5</div>
+               <div class="button" id="numbtn">6</div>
+                <div class="button" style="background-color: coral">-</div>
+        </div>
+
+        <div class="calc-row">
+                 <div class="button" id="numbtn">1</div>
+                <div class="button" id="numbtn">2</div>
+               <div class="button" id="numbtn">3</div>
+               <div class="button" style="background-color: coral">+</div>
+        </div>
+
+        <div class="calc-row">
+              <div class="button" id="numbtn">0</div>
+              <div class="button">.</div>
+              <div class="button">*</div>
+                <div class="buttoncall" style="background-color: coral" id="calBtn">=</div>
+        </div>
+    
+    </div>
+
+       <script>
+         var disp=document.getElementsByClassName('.screen')
+         function ud(n) {
+            disp.innerHTML += n;
+            
+         }
+
+         function ans() {
+            c=eval(disp.innerHTML);
+            disp.innerHTML=c;
+            
+         }
+
+         function clc() {
+            disp.innerHTML;
+            
+         }
+
+
+document.getElementsByClassName('.button').addEventListener("click",function(){ ud(); });
+
+            console.log('ud');
+
+
+
+
+
+
+
+       </script>
+      
+
+     
+</body>
+</html>

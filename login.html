@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/d7006f639c.js" crossorigin="anonymous"></script>
+        
+        <style>
+            .flexcontainer{display: flex;background-color: #F5F5F5;}
+            .sreen1{width: 414px;height: 736px;position: relative;background-color: #A06CD5;align-items: center;}
+            img{width: 130px;height: 130px;font-family: Arial, Helvetica, sans-serif;font-style: normal;color: black;margin-top: 60px;justify-items: center;margin-left: 125px;}
+            #match{position: absolute;width: 272px;height: 75px;left: 71px;top: 183px;font-family:'Roboto';font-style: normal;font-size: 75px;font-weight: 500;line-height: 75px;color: black;text-align: center;}
+            #username{width: 296px;position: absolute;height: 30px;left: 59px;top: 382px;background-color: #F5F5F5;border-radius: 5px;}
+            #pwd{position: absolute;width: 296px;height: 30px;left: 59px;top: 438px;background-color: #F5F5F5;border-radius: 5px;}
+            #fas{position: absolute;width: 11px;height: 14px;left: 80px;top: 450px;font-family: 'font Awesome 5 free';font-style:normal ;font-weight: 900;font-size: 12px;line-height: 14px;color: #000000;margin-left: 80px;}
+            #forgotpwd{position: absolute;width: 80px;height: 12px;left: 274px;top: 472px;font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 8px;line-height: 12px;color: black;margin-top: 60px;}
+            #login{position: absolute;width: 31px;height: 14px;left: 150px;top: 400px;font-family: 'Roboto';font-style: normal;font-weight: 900;font-size: 12px;line-height: 14px;color: #000000;margin-top: 75px;}
+            #sign_up{position: absolute;width: 34px;height: 12px;left: 189px;top: 543px;font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 11px;line-height: 12px;color: black;}
+            #forgotpwd{position: absolute;width: 80px;height: 12px;left: 247px;top: 425px;font-style: normal;font-family: Arial, Helvetica, sans-serif;font-weight: 400px;font-size: 10px;line-height: 12px;color: black;float: right;}
+            #login{position: absolute;width: 95px;height: 20px;left: 150px;top: 450px;background: #F5F5F5;border-radius: 10px;align-items: center;color:#000000;}
+            .home_screen{position: relative;width: 414px;height: 736px;background: #F5F5F5;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+            #matchme{position: absolute;width: 153px;height: 42px;left: 130px;top: 20px;font-family: 'Roboto';font-style:normal;font-weight: 400;font-size: 26px;line-height: 42px;text-align: start;}
+            #location{position: absolute;width: 116px;height: 21px;left: 46px;top: 60px;font-family: 'Roboto';font-style: normal;font-weight: 900;font-size: 15px;line-height: 21px;color: #000000;text-align: start;}
+            #img1{position: absolute;width: 361px;height: 490px;left: 26px;top: 123px;background-color: antiquewhite;background-image: url(https://pbs.twimg.com/media/FWk_YOlXkAAcQAl?format=jpg&name=small);border-radius: 30px;}
+            #dav{position: absolute;width: 184;height: 28px;left: 115px;top: 562px;font-family: 'Roboto';font-style: normal;font-weight: 500;font-size: 24px;line-height: 28px;}
+             input::before{position: absolute;width: 11px;height: 14px;left: 67px;top: 390px;font-family: 'font Awesome 5 free';font-style:normal ;font-weight: 900;font-size: 12px;line-height: 14px;}
+
+        
+
+        </style>
+    </head>
+    <body>
+
+        <div class="flexcontainer">
+            <div class="sreen1">
+             <section class="sreen1">
+                <img src="file:///C:/Users/hp/Desktop/visual%20html/images/smile.png"><br>
+                <h1 id="match">matchMe</h1>
+             </section><br>
+            </div> 
+
+            <div class="screen1">
+                <form>
+                    
+                        <i class="fa-solid fa-user" id="fas"></i>
+                        
+                        <input type="text" id="username"name="username"placeholder="username">
+                    
+
+                    <label for="pwd"></label>
+                    <input type="password" id="pwd"name="password"placeholder="password....">
+                </form>
+            </div>
+            
+
+           <div class="screen1">
+              <span id="forgotpwd">Forgot <a href="#">password?</a></span>
+           </div>
+
+           <div class="screen1">
+             <input type="button" id="login"value="login">
+             <span id="sign_up"style="color:black"><a href="sign up"style="color:black">sign up</a></span>
+           </div>
+            
+        </div>
+    </body>
+</html>

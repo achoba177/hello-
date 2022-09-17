@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Tee-Burger</title>
+<style>
+
+*{box-sizing: border-box;}
+
+body{margin: 0;font-family: Arial;font-size: 17px;background-size: cover;background: rgba(0,0 , 0, 0.5);}
+
+#video{position: fixed; right: 0;margin: 20px;padding: 30px;}
+
+.content{bottom: 0;background: rgba(0,0 , 0, 0.5);color: #f1f1f1; width: 100%;padding: 20px;}
+  #mybtn{width: 200px;font-size: 18px;padding: 10px;border: none;background: #000;color: #fff;cursor: pointer;}
+    #mybtn:hover{background: #ddd;color: #000;}
+    h5{width: 500px;}
+</style>
+</head>
+
+<body>
+   <video autoplay muted loop id="myvideo">
+      <source src ="video2.mp4.mp4" type="video/mp4">
+   </video>
+
+
+   <div class="content">
+      <h1>Exercise Is Body Well Being</h1>
+          <h3>Exercise Quotes!!!!!</h3>
+          <h5>“If You Want Something You've Never Had, You Must Be Willing To Do Something You've Never Done.” “The Body Achieves What The Mind Believes.” “Once You Are Exercising Regularly, The Hardest Thing Is To Stop It.” “If You Don't Make Time For Exercise, You'll Probably Have To Make Time For Illness.</h5>
+         
+      <button id="mybtn" onclick="myFunction()">pause</button>
+
+   </div>
+
+   <script>
+        let video=document.getElementById('myvideo');
+        let btn=document.getElementById('mybtn');
+
+         function myFunction() {
+
+            if (video.paused) {
+               video.play();
+               btn.innerHTML="pause";
+            }
+            else{
+               video.pause();
+               btn.innerHTML="play";
+
+
+            }
+            
+         }
+   </script>
+
+</body>
+</html>

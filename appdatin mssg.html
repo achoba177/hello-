@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/d7006f639c.js" crossorigin="anonymous"></script>
+
+
+        <style>
+            .container{position: relative;width: 414px;height: 736px;background: #f5f5f5;}
+            #name{position: absolute;width: 107px;height: 21px;left: 45px;top: 15px;font-family: 'Roboto';font-style: normal;font-weight: 900;font-size: 18px;line-height: 21px;color: #000000;}
+            #namecontainer{position: absolute;width: 414px;height: 60px;right: 0px;top: 0px;background: #A06CD5;border-radius: 0;}
+            #arrow{position: absolute;width: 16px;height: 21px;left: 15px;top: 19px;font-family: 'Font-Awesome 5 Free';font-style: normal;font-weight: 900;font-size: 18px;line-height: 21px;color: #000000;}
+            #send_message{position: absolute;width: 185px;height: 21px;left: 115px;top: 137px;font-family: 'Roboto';font-style: normal;font-weight: 900;font-size: 18px;line-height: 21px;color: #000000;}
+            #img{position: absolute;width: 239px;height: 324px;left: 88px;top: 188px;background: url(https://pbs.twimg.com/media/FW_XmurXkAAcatN?format=jpg&name=medium);border-radius: 50%} 
+            #chat_mssgbox{position: absolute;width: 414px;height: 60px;right: 0px;top: 677px;background: #A06CD5;border-radius: 3px;}
+             #innerbox{position: absolute;width: 385px;height: 30px;left: 16px;top: 15px;background: #c19EE0;border-radius: 45px;}
+             #send{position: absolute;width: 14px;height: 16px;left: 373px;top: 698px;font-family: 'Font Awesome 5 Free';font-style: normal;font-weight: 900;font-size: 14px;line-height: 16px;color: #000000;}
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div id="namecontainer">
+
+                <span id="arrow"><i class="fa-solid fa-square-left"></i></span>
+                <p id="name">Elly</p>
+                <span id="arrow"><i class="fa-solid fa-square-left"></i></span>
+            </div>
+
+
+            <div id="send_message">
+                <h4>Send them a message</h4>
+            </div>
+
+            <div id="img">
+            <img src="https://pbs.twimg.com/media/FW_XmurXkAAcatN?format=jpg&name=medium"width="238"height="335" style="border-radius:50%">
+            </div>
+
+            <div id="chat_mssgbox">
+               <input type="text" id="innerbox"name="type a message"placeholder="Type a message">
+               <span id="send">
+                <i class="fa-solid fa-papper-plane-top"></i>
+            </span>
+            </div>
+            
+
+        </div>
+
+    </body>
+</html>

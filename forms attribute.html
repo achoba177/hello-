@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Forms of attribute
+    </head>
+        <body>
+          <h2>The form  method attribute</h2>
+          <p>When submitting this form, the result will be opened in a new browser tab:</p>
+            <form action="/action_page.php" target="_blank" method="post">
+              <label for="fname">first name:</label><br>
+              <input type="text" id="fname" name="fname" value="john"><br>
+              <label for="lname">last name:</label><br>
+              <input type="text" id="lname"name="lname"value="Doe"><br><br>
+              <p>After you submit, notice that, unlike the GET method, the form values is NOT visible in the address bar of the new browser tab.</p>
+
+              <h1>the form autocomplete attribute</h1>
+            <form action="/action_page.php" autocomplete="on">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="email">Email:</label>
+                <lnput type="text" id="email" name="email"><br><br>
+                <input type="summit">
+
+                <h1>The form novalidate attribute</h1>
+                <p>The novalidate attribute indicates that the form input is not to be validated on submit:</p>
+                <form action="/action_page.php" novalidate>
+                <label for="email">Enter your email:</label>
+                <input type="text" id="email" name="email"><br><br>
+                <input type="summit"></input>
+                <p><strong>Note:</strong> The novalidate attribute of the form tag is not supported in Safari 10 (or earlier).</p>
+
+                <h1>The input element</h1>
+                <form action="/action_page.php">
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <input type="summit" value="summit">
+
+                    <h1>input type radio</h1>
+                    <p>Choose your favorite Web language:</p>
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">HTML</label><br>
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">CSS</label><br>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+
+                    <H1>input type=date<h1>
+                    <p>Use the min and max attributes to add restrictions to dates:</p>
+                    <form action="/action_page.php">
+                    <label for="datemin">Enter a date after 2000-01-01:</label>
+                    <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+                    <label for="datemax">Enter a date before 1980-01-01:</label>
+                    <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+                    <input type="submit" value="Submit">
+                    <p><strong>Note:</strong> type="date" is not supported in Internet Explorer 11 or prior Safari 14.1.</p>
+
+                    <h1>input type=checkbox</h1>
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1">i have a bike</label>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="car">
+                    <label for="vehicle2">i have a car</label>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="boat">
+                    <label for="vehicle">i have a boat</label>
+
+                    <h1>the select element</h1>
+                    <p>The select element defines a drop-down list</p>
+                    <label for="cars">Choose a car:</label>
+                    <select id="cars" name="cars"></select>
+                    <option value="volvo">volvo</option>
+                    <option value="toyota">toyota</option>
+                    <option value="ford">ford</option>
+                    <option value="benz">benz</option>
+
+                    <h2>Pre-selected Option</h2>
+                    <p>You can preselect an option with the selected attribute:</p>
+                    <form action="/action_page.php">
+                    <label for="cars">Choose a car:</label>
+                    <select id="cars" name="cars"></select>
+                    <option value="volvo">volvo</option>
+                    <option value="toyota">toyota</option>
+                    <option value="ford">ford</option>
+                    <option value="fiat" selected>Fiat</option>
+                    <option value="benz">benz</option>
+                    <input type="summit"> </select>
+
+                    <h1>Allow Multiple Selections</h1>
+                    <p>Use the multiple attribute to allow the user to select more than one value.</p>
+                    <form action="/action_page.php">
+                     <label for="cars">choose a car:</label>
+                     <select id="cars" name="cars" size="4" multiple></select>
+                     <option value="volvo">volvo</option>
+                      <option value="toyota">toyota</option>
+                      <option value="benz">benz</option>
+                      <option value="ford">ford</option>
+                      </select><br><br>
+                      <input type="summit">
+
+                      <h1>text area element</h1>
+                      <p>The textarea element defines a multi-line input field.</p>
+                      <form action="/action_page.php">
+                      <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea><br><br>
+                      <input type="summut">
+
+                      <h1>The button element</h1>
+                      <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+                      <p>fieldset element</p>
+                      <h2>Grouping Form Data with Fieldset</h2>
+                      <p>The fieldset element is used to group related data in a form, and the legend element defines a caption for the fieldset element.</p>
+                    <fieldset>
+                        <legend>Personalia:</legend>
+                        <label for="fname">Firstname</label><br>
+                        <input type="text" id="fname" name="fname" value="John"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <input type="submit" value="Submit">
+                    </fieldset>
+
+                        <h1>input type element:Local Date Field</h1>
+                        <p>The <strong>input type="datetime-local"</strong> specifies a date and time input field, with no time zone.</p>
+                        <form action="/action_page.php">
+                        <label for="birthdaytime">Birthday (date and time):</label>
+                        <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                        <input type="submit" value="Submit">
+                        <p><strong>Note:</strong> type="datetime-local" is not supported in Internet Explorer 11 or prior Safari 14.1.</p>
+
+                        <h1>input type Email</h1>
+                        <p>The <strong>input type="email"</strong> is used for input fields that should contain an e-mail address:</p>
+                        <form action="/action_page.php">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email">
+                        <input type="submit" value="Submit">
+
+                        <h1>input type="file"</h1>
+                        <label> label for="myfile">Select a file:</label>
+                        <input type="file" id="myfile" name="myfile">
+
+                        <h1>input type="month"</h1>
+                        <label for="bdaymonth">Birthday (month and year):</label>
+                        <input type="month" id="bdaymonth" name="bdaymonth">
+
+                        <h1>input type number</h1>
+                        <p>The <strong>input type="number"</strong> defines a numeric input field.</p>
+                        <p>You can use the min and max attributes to add numeric restrictions in the input field:</p>
+                        <form action="/action_page.php">
+                        <label for="quantity">Quantity (between 1 and 5):</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5">
+                        <input type="submit" value="Submit">
+
+                        <h1>input for numeric steps</h1>
+                        <p>Depending on browser support: Fixed steps will apply in the input field.</p>
+                        <form action="/action_page.php">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
+                        <input type="submit" value="Submit">
+
+                        <h1> input type="range"</h1>
+                        <p>Depending on browser support: The input type "range" can be displayed as a slider control.</p>
+                        <form action="/action_page.php" method="get">
+                        <label for="vol">Volume (between 0 and 50):</label>
+                        <input type="range" id="vol" name="vol" min="0" max="50">
+                        <input type="submit" value="Submit">
+
+                        <h1> input type="search"</h1>
+                        <p>The <strong>input type="search"</strong> is used for search fields (behaves like a regular text field):</p>
+                        <form action="/action_page.php">
+                        <label for="gsearch">Search Google:</label>
+                        <input type="search" id="gsearch" name="gsearch">
+                        <input type="submit" value="Submit">
+
+                        <h1>input type="tel"</h1>
+                        <p>The <strong>input type="tel"</strong> is used for input fields that should contain a telephone number:</p>
+                        <form action="/action_page.php">
+                        <label for="phone">Enter a phone number:</label><br><br>
+                        <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+                        <small>Format: 123-45-678</small><br><br>
+                        <input type="submit" value="Submit">
+
+
+                        <h1><h1>Show a Time Input Control</h1></h1>
+                        <p>The <strong>input type="time"</strong> allows the user to select a time (no time zone):</p>
+                        <p>If the browser supports it, a time picker pops up when entering the input field.</p>
+                        <form action="/action_page.php">
+                        <label for="appt">Select a time:</label>
+                        <input type="time" id="appt" name="appt">
+                        <input type="submit" value="Submit">
+
+                        <h1> input type="url"</h1>
+                        <p>The <strong>input type="url"</strong> is used for input fields that should contain a URL address:</p>
+                        <form action="/action_page.php">
+                        <label for="homepage">Add your homepage:</label>
+                        <input type="url" id="homepage" name="homepage">
+                        <input type="submit" value="Submit">
+
+                        <h1>input type="week"</h1>
+                        <form>
+                        <label for="week">Select a week:</label>
+                        <input type="week" id="week" name="week">
+
+                        <h1>The input pattern attribute ..e.g:country code</h1>
+                        <p>The pattern attribute specifies a regular expression that the input element's value is checked against.</p>
+                        <form action="/action_page.php">
+                        <label for="country_code">Country code:</label>
+                        <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br><br>
+                        <input type="submit" value="Submit">
+
+                        <h1>The input placeholder attribute,,,text, search, url, tel, email, and password.</h1>
+                        <p>The placeholder attribute specifies a short hint that describes the expected value of an input field.</p>
+                        <form action="/action_page.php">
+                        <label for="phone">Enter a phone number:</label>
+                        <input type="tel" id="phone" name="phone"placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+                        <input type="submit" value="Submit">
+
+                        <h1>The input required attribute</h1>
+                        <p>The required attribute specifies that an input field must be filled out before submitting the form.</p>
+                        <form action="/action_page.php">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <input type="submit" value="Submit">
+                        <div id="sidebar">
+                            <h3>Side-Bar</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                          
+
+
+
+                        
+                    
+                    
+
+
+                </form>
+      </body>
+</html>
+
